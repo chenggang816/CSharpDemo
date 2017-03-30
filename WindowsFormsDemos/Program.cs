@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using WindowsFormsDemos.DataGridViewDemo;
 
 namespace WindowsFormsDemos
 {
@@ -15,7 +16,8 @@ namespace WindowsFormsDemos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PropertyGridDemo());
+            //Application.Run(new WinPropertyGridDemo());
+            Application.Run(new WinDataGridViewDemo());
         }
     }
 }

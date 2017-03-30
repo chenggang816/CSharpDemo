@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.ComponentModel;
 
-namespace WindowsFormsDemos.Classes
+namespace WindowsFormsDemos.PropertyGridDemo.Classes
 {
     [DescriptionAttribute("展开以查看应用程序的拼写选项。")]
     public class SpellingOptions

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsDemos
 {
-    partial class PropertyGridDemo
+    partial class WinPropertyGridDemo
     {
         /// <summary>
         /// 必需的设计器变量。

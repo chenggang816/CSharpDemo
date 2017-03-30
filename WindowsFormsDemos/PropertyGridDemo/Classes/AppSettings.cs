@@ -4,12 +4,21 @@ using System.Linq;
 using System.Text;
 using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Design;
 
-namespace WindowsFormsDemos.Classes
+namespace WindowsFormsDemos.PropertyGridDemo.Classes
 {
     [DefaultPropertyAttribute("SaveOnClose")]
     public class AppSettings
     {
+        public enum UIStyle
+        {
+            Win7,
+            Win10,
+            Office2010,
+            Office2013,
+            Metro
+        }
         private bool saveOnClose;
         private string greetingText = "欢迎使用应用程序！";
         private int itemsInMRU = 4;
@@ -106,6 +115,82 @@ namespace WindowsFormsDemos.Classes
             get { return spellCheckOption; }
             set { spellCheckOption = value; }
         }
+
+        private string defaultFileName ;
+        [Category("文档设置"),
+        TypeConverter(typeof(FileNameConverter))]
+        public string DefaultFileName 
+        {
+            get { return defaultFileName ; }
+            set { defaultFileName  = value; }
+        }
+
+        private UIStyle myUIStyle;
+
+        public UIStyle MyUIStyle
+        {
+            get { return myUIStyle; }
+            set { myUIStyle = value; }
+        }
+
+        private string finishTime = DateTime.Now.ToShortDateString();
+
+        [Description("完成时间"),
+        Category("属性"),
+        Editor(typeof(PropertyGridDateItem),typeof(UITypeEditor))]
+        public string FinishTime
+        {
+            get { return finishTime; }
+            set { finishTime = value; }
+        }
+
+        private string multiLineText="";
+        [Category("属性"),
+        Description("多行文本编辑框"),
+        Editor(typeof(PropertyGridRichText),typeof(UITypeEditor))]
+        public string MultiLineText
+        {
+            get { return multiLineText; }
+            set { multiLineText = value; }
+        }
+
+        private string file;
+        [Category("属性"),
+        Description("文件打开对话框"),
+        Editor(typeof(PropertyGridFileItem), typeof(UITypeEditor))]
+        public string File
+        {
+            get { return file; }
+            set { file = value; }
+        }
+
+        bool _bool = true;
+
+        [Description("布尔"), Category("属性"), TypeConverter(typeof(PropertyGridBoolItem))]
+
+        public int 布尔
+        {
+
+            get { return _bool == true ? 0 : 1; }
+
+            set { _bool = (value == 0 ? true : false); }
+
+        }
+
+        // 选择列表  
+
+        int _comboBoxItems = 0;
+
+        [Description("选择列表"), Category("属性"), TypeConverter(typeof(PropertyGridComboBoxItem))]
+
+        public int 选择列表
+        {
+
+            get { return _comboBoxItems; }
+
+            set { _comboBoxItems = value; }
+
+        }  
 
     } 
 }

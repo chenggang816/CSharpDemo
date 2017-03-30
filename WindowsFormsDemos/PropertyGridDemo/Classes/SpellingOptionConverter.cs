@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.ComponentModel;
 
-namespace WindowsFormsDemos.Classes
+namespace WindowsFormsDemos.PropertyGridDemo.Classes
 {
     public class SpellingOptionConverter:ExpandableObjectConverter
     {

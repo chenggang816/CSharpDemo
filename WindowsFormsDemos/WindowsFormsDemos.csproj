@@ -46,17 +46,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PropertyGridDemo\Classes\AppSettings.cs" />
-    <Compile Include="PropertyGridDemo\Classes\SpellingOptionConverter.cs" />
-    <Compile Include="PropertyGridDemo\Classes\SpellingOptions.cs" />
-    <Compile Include="PropertyGridDemo\PropertyGridDemo.cs">
+    <Compile Include="DataGridViewDemo\WinDataGridViewDemo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PropertyGridDemo\PropertyGridDemo.Designer.cs">
-      <DependentUpon>PropertyGridDemo.cs</DependentUpon>
+    <Compile Include="DataGridViewDemo\WinDataGridViewDemo.Designer.cs">
+      <DependentUpon>WinDataGridViewDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyGridDemo\Classes\AppSettings.cs" />
+    <Compile Include="PropertyGridDemo\Classes\ComboBoxItemTypeConvert.cs" />
+    <Compile Include="PropertyGridDemo\Classes\FileNameConverter.cs" />
+    <Compile Include="PropertyGridDemo\Classes\PropertyGridBoolItem.cs" />
+    <Compile Include="PropertyGridDemo\Classes\PropertyGridComboBoxItem.cs" />
+    <Compile Include="PropertyGridDemo\Classes\PropertyGridDateItem.cs" />
+    <Compile Include="PropertyGridDemo\Classes\PropertyGridFileItem.cs" />
+    <Compile Include="PropertyGridDemo\Classes\PropertyGridRichText.cs" />
+    <Compile Include="PropertyGridDemo\Classes\SpellingOptionConverter.cs" />
+    <Compile Include="PropertyGridDemo\Classes\SpellingOptions.cs" />
+    <Compile Include="PropertyGridDemo\WinPropertyGridDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PropertyGridDemo\WinPropertyGridDemo.Designer.cs">
+      <DependentUpon>WinPropertyGridDemo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DataGridViewDemo\WinDataGridViewDemo.resx">
+      <DependentUpon>WinDataGridViewDemo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -66,8 +82,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="PropertyGridDemo\PropertyGridDemo.resx">
-      <DependentUpon>PropertyGridDemo.cs</DependentUpon>
+    <EmbeddedResource Include="PropertyGridDemo\WinPropertyGridDemo.resx">
+      <DependentUpon>WinPropertyGridDemo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
