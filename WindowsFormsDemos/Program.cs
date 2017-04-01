@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using WindowsFormsDemos.DataGridViewDemo;
+using WindowsFormsDemos.ImageListDemo;
+using WindowsFormsDemos.ListViewDemo;
 
 namespace WindowsFormsDemos
 {
@@ -17,7 +19,9 @@ namespace WindowsFormsDemos
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new WinPropertyGridDemo());
-            Application.Run(new WinDataGridViewDemo());
+            //Application.Run(new WinDataGridViewDemo());
+            //Application.Run(new WinImageListDemo());
+            Application.Run(new WinListViewDemo());
         }
     }
 }

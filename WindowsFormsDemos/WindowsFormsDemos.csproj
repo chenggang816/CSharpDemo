@@ -52,6 +52,21 @@
     <Compile Include="DataGridViewDemo\WinDataGridViewDemo.Designer.cs">
       <DependentUpon>WinDataGridViewDemo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImageListDemo\WinImageListDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageListDemo\WinImageListDemo.Designer.cs">
+      <DependentUpon>WinImageListDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListViewDemo\ListViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListViewDemo\WinListViewDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListViewDemo\WinListViewDemo.Designer.cs">
+      <DependentUpon>WinListViewDemo.cs</DependentUpon>
+    </Compile>
     <Compile Include="PropertyGridDemo\Classes\AppSettings.cs" />
     <Compile Include="PropertyGridDemo\Classes\ComboBoxItemTypeConvert.cs" />
     <Compile Include="PropertyGridDemo\Classes\FileNameConverter.cs" />
@@ -72,6 +87,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DataGridViewDemo\WinDataGridViewDemo.resx">
       <DependentUpon>WinDataGridViewDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageListDemo\WinImageListDemo.resx">
+      <DependentUpon>WinImageListDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListViewDemo\WinListViewDemo.resx">
+      <DependentUpon>WinListViewDemo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
